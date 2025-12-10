@@ -48,15 +48,12 @@ class GrafoEcommerce:
         produtos_do_cliente = self.consultar_vizinhos(id_cliente, "COMPROU")
         recomendacoes = set()
 
-        # Varre todo o grafo
+         
         for outro_user, dados in self.nos.items():
-            # [CORREÇÃO] Tudo o que acontece aqui dentro precisa estar indentado
             if dados["tipo"] == "Cliente" and outro_user != id_cliente:
                 
-                # 1. Cria a variável
                 compras_outro = self.consultar_vizinhos(outro_user, "COMPROU")
                 
-                # 2. Usa a variável (Este IF deve estar ALINHADO com a linha de cima)
                 if any(p in produtos_do_cliente for p in compras_outro):
                     for prod in compras_outro:
                         if prod not in produtos_do_cliente:
