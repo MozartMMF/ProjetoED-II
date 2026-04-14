@@ -65,4 +65,4 @@ def inicializar_dados(grafo):
     # Lucas comprou só a camisa
     grafo.adicionar_relacionamento("Lucas", "Camisa DryFit", "COMPROU")
 
-    print("Dados carregados com sucesso!")
+    print("Dados carregados com sucesso!") 
