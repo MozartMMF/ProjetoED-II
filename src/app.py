@@ -121,4 +121,4 @@ elif menu == "Adicionar Compra":
             st.success(f"Relação criada: {cli} -> COMPROU -> {prod}")
             st.balloons()
         else:
-            st.error("Erro ao criar relação.")
+            st.error("Erro ao criar relação.") 
